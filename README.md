@@ -1,8 +1,9 @@
 # Election-Data-Scraper
-Simple scraper for greek parliamentary election data
+Simple scraper for greek parliamentary election data from the official web site (https://ekloges.ypes.gr/)
+There does not seem to be an API for providing the data, nor a JSON scheme, so a selenium approach was deemed necessary
 The scaper use selenium and a simple pattern recognition to scape
 district level election data 
-An -almost- tidy format is output
+An -almost- tidy format is produced
 ## Finer - grained data
 The same  scaper could be also used for scraping municipality level election data
 The format is more or less the same

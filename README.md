@@ -14,3 +14,5 @@ CSV αρχείο με τα αποτελέσματα των εκλογών του
 ## Possible problems
 The number of voters that actually voted in each district, the number of invalid and white ballots
 is computed from percentages. There might be a small discrepancy
+## Bug 
+A time out , and a better isValid test  should be added. The initial version did not scrape cortrectly a number of districts.

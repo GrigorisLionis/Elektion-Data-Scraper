@@ -80,7 +80,10 @@ def ReadPage(link):
    #the sequence is the same as the sequence of the title entries
    #we use an index idx to correspond parties to results
    #there is an offset of 1, because the first entry with this class type is the word "votes"
-
+   
+   # "w-24 text-right pl-3" shoud be replaced with  "w-24 text-right pl-3 mr-3 md:mr-6" for scrapping municipalitiy level data
+   # the web layout is slightly different
+        
    idx=0
    if(len(pt)==0): 
       print ("ERROR. PAGE DOES NOT EXIST",file=sys.stderr)

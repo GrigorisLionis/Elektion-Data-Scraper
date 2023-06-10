@@ -7,6 +7,7 @@ An -almost- tidy format is produced.
 ## Finer - grained data
 The same  scaper could be also used for scraping municipality level election data.  
 The format is more or less the same  
+Furthermore, the same web page is also used for presenting older data
 ### Changes necessary for finer data 
 * for municipality data the votes are presented inside a div class of type
 "w-24 text-right pl-3 mr-3 md:mr-6" instead of "w-24 text-right pl-3" which is used for district level data
@@ -14,9 +15,17 @@ The format is more or less the same
 ## Output 
 The output of the scraper is also given.
 The file perifereies.csv contains votes for all parties, for all districts.     
-CSV αρχείο με τα αποτελέσματα των εκλογών του Μαίου 2023 για όλες τις περιφέρειες και όλα τα κόμματα.   
+CSV αρχείο με τα αποτελέσματα των εκλογών του Μαίου 2023 για όλες τις περιφέρειες και όλα τα κόμματα.  
+The  file has four columns
+* District name (in Greek)
+* Party name or Code  (in Greek) ( Code could be ΕΓΓΕΓΡΑΜΜΕΝΟΙ=REGISTERED, ΑΚΥΡΑ=INVALD, ΛΕΥΚΑ=WHITE,ΕΓΚΥΡΑ=VALID,ΣΥΜΜΕΤΟΧΗ=VOTERS THAT VOTED
+* Number of votes for May 2023
+* Number of votes for 2019
 ## Possible problems
 The number of voters that actually voted in each district, the number of invalid and white ballots
 is computed from percentages. There might be a small discrepancy
-## Bug 
-A time out , and a better isValid test  should be added. The initial version did not scrape cortrectly a number of districts.
+## Bug - ToDo
+* A time out for loading the page, since some pages are considered invalid. 
+* and a better isValid test  
+* Scarping older election data
+* Add checks on the data to verify correctnes (i.e. sum of votes)

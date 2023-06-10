@@ -2,6 +2,7 @@
 Simple scraper for greek parliamentary election data from the official web site (https://ekloges.ypes.gr/)  
 There does not seem to be an API for providing the data, nor a JSON scheme, so a selenium approach was deemed necessary.
 The scaper use selenium and a simple pattern recognition to scape district level election data.  
+Robots.txt for the website was not located.  
 An -almost- tidy format is produced.    
 Ενας απλός scraper για τα αποτελέσματα των εκλογών του 2023. Λειτουργεί σε επίπεδο περιφέρειας
 ## Finer - grained data

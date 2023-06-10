@@ -7,6 +7,10 @@ An -almost- tidy format is produced.
 ## Finer - grained data
 The same  scaper could be also used for scraping municipality level election data.  
 The format is more or less the same  
+### Changes necessary for finer data 
+* for municipality data the votes are presented inside a div class of type
+"w-24 text-right pl-3 mr-3 md:mr-6" instead of "w-24 text-right pl-3" which is used for district level data
+* the district file should be parsed to find municipality numbering
 ## Output 
 The output of the scraper is also given.
 The file perifereies.csv contains votes for all parties, for all districts.     

@@ -118,7 +118,7 @@ for p in Perif:
     h=r.text
     if(len(h)<10):continue
     PerifData[p]=h
-file2 = open("PSIFOI_p_.json", 'w')
+file2 = open("PSIFOI_p.json", 'w')
 file2.write(json.dumps(PerifData))
 file2.close()
 #print(PerifData)

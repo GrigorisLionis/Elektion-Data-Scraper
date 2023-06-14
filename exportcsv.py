@@ -10,7 +10,7 @@ if os.path.isfile("PSIFOI_p.json"):
     with open("PSIFOI_p.json") as f:
         data=f.read()
         psifoi_p = json.loads(data)
-#parti names. could not find the online. hardcoded
+
 parties={  2: "ΝΕΑ ΔΗΜΟΚΡΑΤΙΑ",
     4: "ΣΥΝΑΣΠΙΣΜΟΣ ΡΙΖΟΣΠΑΣΤΙΚΗΣ ΑΡΙΣΤΕΡΑΣ-ΠΡΟΟΔΕΥΤΙΚΗ ΣΥΜΜΑΧΙΑ",
     106: "ΠΑΣΟΚ - Κίνημα Αλλαγής",
@@ -124,8 +124,9 @@ for p in psifoi_p:
        if par_id in partis_code: parname=partis_code[par_id]
        print("2023May","DISTRICT",per,"DISTRICT",per,parname,votes,sep=",")
     print("2023May","DISTRICT",per,"DISTRICT",per,"LEFKA",lef,sep=",")
-    print("2023May","DISTRICT",per,"AKYRA","DISTRICT",per,akyr,sep=",")
-    print("2023May","DISTRICT",per,"GRMAMMENOI","DISTRICT",per,grm,sep=",")
+    print("2023May","DISTRICT",per,"DISTRICT",per,"AKYRA",akyr,sep=",")
+    print("2023May","DISTRICT",per,"DISTRICT",per,"GRMAMMENOI",grm,sep=",")
+    print("2023May","DISTRICT",per,"DISTRICT",per,"EGYRA",egyr,sep=",")
 
 print(Dimoi)
 for p in psifoi_d:
@@ -147,4 +148,4 @@ for p in psifoi_d:
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"LEFKA",lef,sep=",")
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"AKYRA",akyr,sep=",")
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"GRMAMMENOI",grm,sep=",")
-
+    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per,"EGYRA",egyr,sep=",")

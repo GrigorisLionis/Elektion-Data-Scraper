@@ -3,7 +3,8 @@ Simple scraper for greek parliamentary election data from the official web site 
 As  gioiliop7   suggested there is an API for scraping some of the data.  
 The older python scipt using headless selenium is also included.  
 The code consists of a  python script for downloading the election data, and saving them to a JSON file as a dictionary  
-A second script -exportcsv.py- reads the JSON files and exports data to csv
+A second script -exportcsv.py- reads the JSON files and exports data to csv  
+File Kwdikoi.csv contains the correspondance between codes and districts/municipalites names
 ## Usage
 * ekloges_parser_json.py is run, probably more than one time, to download all data into two JSON files
 * exportscv.py reads the two JSON files and outputs csv

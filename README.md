@@ -16,4 +16,12 @@ The file has 7 columns
 * String whith the district name in which "name" belongs
 * party/code name (codes are LEFKA/AKYRA/GRAMMENOI/EGYRA correspondig to WHITE/INVALID/REGISTERED/VALID)
 * number of votes
+## Older elections - TBI
+The scaper with minimal changes should be able to also read the 2019 elections as is.  
+There are two problems
+* division into municipalities and districts is not constant
+* parties come and go
+
+The first problem is easier to solve.The are in the main site stat data (names etc), it is relatively easy to parse them and reconstruct votes for previous elections as well.  
+The second problem is more difficult, as an online source has not yet identified
 

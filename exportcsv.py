@@ -83,7 +83,8 @@ partis_code={
     11: "oakke",
     136: "ndomi",
     132: "orama",
-    20: "vergis"}
+    20: "vergis",
+    998: "anex/memon"}
 
 Perif={}
 Dimoi={}
@@ -108,8 +109,42 @@ for line in lines:
     Perif[pc]["dimoin"].append(dn)
 
 for p in psifoi_p:
-    p1=psifoi_p[p]
-    print(p1)
+    p1=json.loads(psifoi_p[p])
+    #print(p,p1)
     per=Perif[int(p)]["name"]
     egyr=p1["Egkyra"]
-    print(per,egyr)
+    part=p1["party"]
+    akyr=p1["Akyra"]
+    lef=p1["Leyka"]
+    grm=p1["Gramenoi"]
+    for par in part:
+       par_id=par["PARTY_ID"]
+       votes=par["VOTES"]
+       parname="NA"+str(par_id)
+       if par_id in partis_code: parname=partis_code[par_id]
+       print("2023May","DISTRICT",per,"DISTRICT",per,parname,votes,sep=",")
+    print("2023May","DISTRICT",per,"DISTRICT",per,"LEFKA",lef,sep=",")
+    print("2023May","DISTRICT",per,"AKYRA","DISTRICT",per,akyr,sep=",")
+    print("2023May","DISTRICT",per,"GRMAMMENOI","DISTRICT",per,grm,sep=",")
+
+print(Dimoi)
+for p in psifoi_d:
+    p1=json.loads(psifoi_d[p])
+    dimos=Dimoi[int(p)]
+    dim_name=dimos[0]
+    per_name=dimos[1]
+    egyr=p1["Egkyra"]
+    part=p1["party"]
+    akyr=p1["Akyra"]
+    lef=p1["Leyka"]
+    grm=p1["Gramenoi"]
+    for par in part:
+       par_id=par["PARTY_ID"]
+       votes=par["VOTES"]
+       parname="NA"+str(par_id)
+       if par_id in partis_code: parname=partis_code[par_id]
+       print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,parname,votes,sep=",")
+    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"LEFKA",lef,sep=",")
+    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"AKYRA",akyr,sep=",")
+    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"GRMAMMENOI",grm,sep=",")
+

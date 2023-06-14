@@ -18,12 +18,19 @@ The file has 7 columns
 * String whith the district name in which "name" belongs
 * party/code name (codes are LEFKA/AKYRA/GRAMMENOI/EGYRA correspondig to WHITE/INVALID/REGISTERED/VALID)
 * number of votes
-## Older elections - TBI
-The scaper with minimal changes should be able to also read the 2019 elections as is.  
+## Older elections 
+The scaper with minimal changes should be able to also read the 2019 elections correctly.  
+A csv file with the 2019 elections is also included
 There are two problems
 * division into municipalities and districts is not constant
 * parties come and go
 
 The first problem is easier to solve.The are in the main site stat data (names etc), it is relatively easy to parse them and reconstruct votes for previous elections as well.  
-The second problem is more difficult, as an online source has not yet identified
-
+The second problem is more difficult, as an online source has not yet identified  
+The 2019 file could be incomplete.  
+The file size is considerably smaller - this could simply indicate missing names and/or less parties.
+## ToDo
+* impelement sanity cheks (districts = sum of municipalities, country data, party data)
+* use online data to navigate througout changing districts/municipalities
+* parse web site to automatically correspond party codes  to code names
+* include older data 

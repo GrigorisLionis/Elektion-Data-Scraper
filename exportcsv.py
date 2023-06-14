@@ -10,7 +10,7 @@ if os.path.isfile("PSIFOI_p.json"):
     with open("PSIFOI_p.json") as f:
         data=f.read()
         psifoi_p = json.loads(data)
-
+#parti names. could not find the online. hardcoded
 parties={  2: "ΝΕΑ ΔΗΜΟΚΡΑΤΙΑ",
     4: "ΣΥΝΑΣΠΙΣΜΟΣ ΡΙΖΟΣΠΑΣΤΙΚΗΣ ΑΡΙΣΤΕΡΑΣ-ΠΡΟΟΔΕΥΤΙΚΗ ΣΥΜΜΑΧΙΑ",
     106: "ΠΑΣΟΚ - Κίνημα Αλλαγής",

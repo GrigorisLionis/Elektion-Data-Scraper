@@ -2,6 +2,13 @@ import json
 import requests
 import os
 
+
+#simple scraper using API
+#reads all vote data for disticts and municipalites
+#saves data in local JSON file
+#sometimes web pages are down so we aggregate the data in the local file and rerun the script as necessary
+
+
 Perif={}
 Dimoi={}
 
@@ -25,8 +32,11 @@ for line in lines:
     Perif[pc]["dimoin"].append(dn)
 
 
+#create two dics, one witi DISTRICT names-codes : Perif
+#one with Municipalities names-codes, as well as with Districts in which they belong
 
 
+#local file to save all data for districts
 if os.path.isfile("PSIFOI_p.json"):
     with open("PSIFOI_p.json") as f:
         data=f.read()
@@ -34,8 +44,11 @@ if os.path.isfile("PSIFOI_p.json"):
 else:
     js={}
 
+
 link_tmp="http://ekloges-prev.singularlogic.eu/2023/may/dyn/v/ep_"
 PerifData={}
+#single dictionary holding all vote data for districts
+
 for p in Perif:
     if(str(p) in js):
         PerifData[p]=js[str(p)]
@@ -46,13 +59,14 @@ for p in Perif:
     h=r.text
     if(len(h)<10):continue
     PerifData[p]=h
+    #include all data of district in the single dictionary
 file2 = open("PSIFOI_p.json", 'w')
 file2.write(json.dumps(PerifData))
 file2.close()
-#print(PerifData)
 
 
 
+#local fil with all vote data for municipalities
 if os.path.isfile("PSIFOI_d.json"):
     with open("PSIFOI_d.json") as f:
         data=f.read()
@@ -65,6 +79,8 @@ else:
 
 link_tmp="http://ekloges-prev.singularlogic.eu/2023/may/dyn/v/dhm_"
 DhmData={}
+#single dictionary of all vote data for all municipalities
+
 for p in Dimoi:
     if(str(p) in js):
         DhmData[p]=js[str(p)]

@@ -9,9 +9,9 @@ File Kwdikoi.csv contains the correspondance between codes and districts/municip
 * ekloges_parser_json.py is run, probably more than one time, to download all data into two JSON files
 * exportscv.py reads the two JSON files and outputs csv
 ## Output
-A csv file with election data for the 2023 May elections is included  
-The file has 7 columns
-* Date
+Two csv files with election data for the 2023 May and 2023 Jube elections are included  
+Each file has 7 columns
+* Datestring
 * String identification of whether the data is MUNICIPALITY of DISTRICT
 * name of MUNICIPALITY or DISTRICT (in greek)
 * String DISTRICT (could be ommited)

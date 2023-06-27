@@ -34,4 +34,5 @@ The file size is considerably smaller - this could simply indicate missing names
 * use online data to navigate througout changing districts/municipalities
 * parse web site to automatically correspond party codes  to code names
 * include older data
-* use json data for date extraction / currently hardcoded in script 
+* use json data for date extraction / currently hardcoded in script
+* parse higher granularity data 

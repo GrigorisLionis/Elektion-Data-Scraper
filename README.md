@@ -33,4 +33,5 @@ The file size is considerably smaller - this could simply indicate missing names
 * impelement sanity cheks (districts = sum of municipalities, country data, party data)
 * use online data to navigate througout changing districts/municipalities
 * parse web site to automatically correspond party codes  to code names
-* include older data 
+* include older data
+* use json data for date extraction / currently hardcoded in script 

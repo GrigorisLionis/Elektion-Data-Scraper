@@ -148,4 +148,4 @@ for p in psifoi_d:
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"LEFKA",lef,sep=",")
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"AKYRA",akyr,sep=",")
     print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"GRMAMMENOI",grm,sep=",")
-    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per,"EGYRA",egyr,sep=",")
+    print("2023May","MUNICIPALITY",dim_name,"DISTRICT",per_name,"EGYRA",egyr,sep=",")

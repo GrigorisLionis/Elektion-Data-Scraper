@@ -9,6 +9,10 @@ File Kwdikoi.csv contains the correspondance between codes and districts/municip
 * ekloges_parser_json.py is run, probably more than one time, to download all data into two JSON files
 * exportscv.py reads the two JSON files and outputs csv
 ## Output
+### 2024
+A csv file with election data for the 2024 June election is included
+Structure is the same as the structure for the 2023 csv files
+### 2023
 Two csv files with election data for the 2023 May and 2023 Jube elections are included  
 Each file has 7 columns
 * Datestring
@@ -35,4 +39,6 @@ The file size is considerably smaller - this could simply indicate missing names
 * parse web site to automatically correspond party codes  to code names
 * include older data
 * use json data for date extraction / currently hardcoded in script
-* parse higher granularity data 
+* parse higher granularity data
+* parse data for candidate vote
+* parse data for mail vote and for vote in different municipality than home municipality
